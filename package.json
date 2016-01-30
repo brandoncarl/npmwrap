@@ -1,0 +1,14 @@
+{
+  "name": "npmwrap",
+  "version": "0.1.0",
+  "description": "Wraps common npm commands with sync, async and promise-based calls",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brandon Carl (http://www.brandoncarl.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "promise": "^7.1.1"
+  }
+}
