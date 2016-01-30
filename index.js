@@ -7,4 +7,4 @@
 
 "use strict";
 
-var npm = module.exports = require("./lib/npm");
+var npm = module.exports = require("./lib/commands");
