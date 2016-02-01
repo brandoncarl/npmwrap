@@ -11,6 +11,6 @@
   "dependencies": {
     "mkdirp": "^0.5.1",
     "promise": "^7.1.1",
-    "reorg": "^0.1.0"
+    "reorg": "^0.1.1"
   }
 }
