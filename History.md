@@ -1,4 +1,9 @@
 
+v0.1.2
+----------
+* commands#mapFlags: prevents mapping of "undefined"
+
+
 v0.1.1
 ----------
 * commands: improved polymorphism via reog
