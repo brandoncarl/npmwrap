@@ -1,4 +1,9 @@
 
+v0.1.3
+----------
+* commands#runCommand: creates cwd if doesn't exist
+
+
 v0.1.2
 ----------
 * commands#mapFlags: prevents mapping of "undefined"
