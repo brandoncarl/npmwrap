@@ -1,4 +1,15 @@
 
+v0.1.5
+----------
+* Adds Readme
+* Extensive commenting
+
+
+v0.1.4
+----------
+* package.json: updates reorg to v0.1.1
+
+
 v0.1.3
 ----------
 * commands#runCommand: creates cwd if doesn't exist
