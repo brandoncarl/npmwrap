@@ -12,5 +12,9 @@
     "mkdirp": "^0.5.1",
     "promise": "^7.1.1",
     "reorg": "^0.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/brandoncarl/npmwrap.git"
   }
 }
