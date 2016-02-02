@@ -20,7 +20,7 @@
 //  Dependencies
 //
 
-var exec         = require("./exec"),
+var exec         = require("./lib/exec"),
     reorg        = require("reorg"),
     mkdirp       = require("mkdirp");
 
