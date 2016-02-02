@@ -106,7 +106,7 @@ var runCommand = reorg(function(method, command, packages, flags, next) {
   else
     return exec.async("npm", args, options, next);
 
-}, "string", "string", [["string", "array"], null], "object");
+}, "string!", "string!", [["string", "array"], null], "object");
 
 
 
