@@ -1,10 +1,11 @@
-
-/*
+/**
 
   npmwrap
+  Copyright 2016 Brandon Carl
+  MIT Licensed
 
-*/
+**/
 
 "use strict";
 
-var npm = module.exports = require("./lib/commands");
+module.exports = require("./lib/commands");
