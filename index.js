@@ -22,6 +22,8 @@
 
 var exec         = require("./lib/exec"),
     reorg        = require("reorg"),
+    readPkg      = require("read-pkg"),
+    writePkg     = require("write-pkg"),
     mkdirp       = require("mkdirp");
 
 
@@ -44,6 +46,33 @@ var flagLookup = {
   "global"  : "--global",
   "save"    : "--save",
   "saveDev" : "--save-dev",
+};
+
+
+/**
+
+  Ensures package.json exists and contains dependencies and dev dependencies.
+
+  @param {Function} [next] If callback is present, runs async
+
+**/
+
+function ensurePackageExists(next) {
+  var defaults = { dependencies : {}, devDependencies : {} },
+      done = function(){ next(); };
+
+  if (next) {
+    readPkg().then(done).catch(function(err) {
+      writePkg(defaults).then(done).catch(next);
+    });
+  } else {
+    try {
+      readPkg.sync();
+    } catch (err) {
+      return writePkg.sync(defaults);
+    }
+  }
+
 };
 
 
