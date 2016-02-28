@@ -115,6 +115,7 @@ function mapFlags(options) {
 var runCommand = reorg(function(method, command, packages, flags, next) {
 
   var args = [command],
+      needsPkg = (/^((un)?install|update)$/i.test(command) && (flags.save || flags.saveDev)),
       options = {};
 
   // Add packages
@@ -130,10 +131,18 @@ var runCommand = reorg(function(method, command, packages, flags, next) {
     mkdirp.sync(options.cwd);
   }
 
-  if ("sync" === method)
+  if ("sync" === method) {
+    if (needsPkg) ensurePackageExists();
     return exec.sync("npm", args, options);
-  else
-    return exec.async("npm", args, options, next);
+  } else {
+    if (needsPkg)
+      return ensurePackageExists(function(err) {
+        if (err) return next(err);
+        return exec.async("npm", args, options, next);
+      });
+    else
+      return exec.async("npm", args, options, next);
+  }
 
 }, "string!", "string!", [["string", "array"], null], "object");
 
