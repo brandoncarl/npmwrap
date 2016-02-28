@@ -11,7 +11,9 @@
   "dependencies": {
     "mkdirp": "^0.5.1",
     "promise": "^7.1.1",
-    "reorg": "^0.2.1"
+    "read-pkg": "^1.1.0",
+    "reorg": "^0.2.1",
+    "write-pkg": "^1.0.0"
   },
   "repository": {
     "type": "git",
