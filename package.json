@@ -1,6 +1,6 @@
 {
   "name": "npmwrap",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Wraps common npm commands with sync, async and promise-based calls",
   "main": "index.js",
   "scripts": {
